@@ -37,9 +37,9 @@ else
         -v `pwd`/docker/${CONFIG_ENV}/supervisord.conf:/etc/supervisord.conf \
         -v `pwd`/docker/${CONFIG_ENV}/redis.conf:/root/redis.conf \
         -d \
-        -p 8080:8080 \
-        -p 7070:7070 \
-        -p 7000:7000 \
+        -p 8003:8080 \
+        -p 8002:7070 \
+        -p 8001:7000 \
         ${DOCKER_IMAGE} \
         supervisord -n && docker exec gochat-${CONFIG_ENV} /bin/sh './reload.sh'
     else
@@ -54,9 +54,9 @@ else
         -v `pwd`/docker/${CONFIG_ENV}/supervisord.conf:/etc/supervisord.conf \
         -v `pwd`/docker/${CONFIG_ENV}/redis.conf:/root/redis.conf \
         -d \
-        -p 8080:8080 \
-        -p 7070:7070 \
-        -p 7000:7000 \
+        -p 8003:8080 \
+        -p 8002:7070 \
+        -p 8001:7000 \
         ${DOCKER_IMAGE} \
         supervisord -n && docker exec gochat-${CONFIG_ENV} /bin/sh './reload.sh'
     fi
