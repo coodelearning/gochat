@@ -14,11 +14,11 @@ else
     echo "now env is:${CONFIG_ENV}"
     if [ "${CONFIG_ENV}" == "dev" ]
     then
-        DOCKER_IMAGE="lockgit/gochat"
+        DOCKER_IMAGE="wangziluo-docker.pkg.coding.net/devopstest/kubedemo/gochat"
     elif [ "${CONFIG_ENV}" == "prod" ]
     then
         # You can use your own build docker image
-        DOCKER_IMAGE="lockgit/gochat"
+        DOCKER_IMAGE="wangziluo-docker.pkg.coding.net/devopstest/kubedemo/gochat"
     fi
 
     echo "nice, now set docker image is:${DOCKER_IMAGE}"
